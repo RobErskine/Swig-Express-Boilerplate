@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -10,13 +9,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
-
-
-//define reqs
 var http = require("http");
 var path = require("path");
 var cons = require('consolidate');
-
 var app = express();
 
 app.engine('html', swig.renderFile);
@@ -30,9 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-
 // require routes
 require("./routes")(app);
 // catch 404 and forward to error handler
