@@ -137,7 +137,7 @@ module.exports = function(grunt) {
           livereload: true,
         },
         html:{
-          files: ['public/views/**/*.html','craft/**/*.html'],
+          files: ['public/views/**/*.html','build/views/**/*.js','routes/**/*.js'],
           tasks: ['build'],
         },
         js:{
